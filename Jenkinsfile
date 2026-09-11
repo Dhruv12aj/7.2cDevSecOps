@@ -34,3 +34,9 @@ pipeline {
         }
     }
 }
+
+stage('NPM Audit (Security Scan)') {
+    steps {
+        bat 'npm audit || exit /b 0'
+    }
+}
